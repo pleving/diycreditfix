@@ -189,6 +189,20 @@ export default function RootBehaviorsPage() {
           </p>
         </div>
 
+        {/* ADHD Bridge Callout */}
+        <div className="bg-brand-600 rounded-2xl p-6 mb-10 flex gap-4 items-start">
+          <span className="text-3xl flex-shrink-0">🧠</span>
+          <div>
+            <p className="font-bold text-white mb-1">Notice several of these feel automatic or involuntary?</p>
+            <p className="text-brand-100 text-sm leading-relaxed mb-3">
+              If impulsivity, forgetfulness, and time blindness feel like more than habits — they may be. Many of these root behaviors are directly linked to ADHD executive dysfunction. We've built a dedicated section that addresses the neuroscience behind each one.
+            </p>
+            <Link href="/adhd" className="inline-block bg-white text-brand-700 font-semibold text-sm px-4 py-2 rounded-lg hover:bg-brand-50 transition-colors">
+              Read: ADHD & Credit Repair Hub →
+            </Link>
+          </div>
+        </div>
+
         {/* Table of Contents */}
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-12">
           <h3 className="font-bold text-gray-900 mb-4 text-lg">The 10 Root Behaviors</h3>

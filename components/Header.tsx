@@ -26,6 +26,18 @@ const navLinks = [
       { label: 'How to Dispute Errors', href: '/learn/dispute-errors' },
     ]
   },
+  {
+    label: 'ADHD & Credit',
+    href: '/adhd',
+    children: [
+      { label: '🧠 ADHD Hub — Overview', href: '/adhd' },
+      { label: 'How ADHD Hurts Your Score', href: '/adhd/credit-score-impact' },
+      { label: 'ADHD-Proof Banking Setup', href: '/adhd/banking-setup' },
+      { label: 'ADHD & Impulse Spending', href: '/adhd/impulse-spending' },
+      { label: 'Late Payment Recovery', href: '/adhd/late-payment-recovery' },
+      { label: 'Budgeting for ADHD Brains', href: '/adhd/adhd-budgeting' },
+    ]
+  },
 ]
 
 export default function Header() {
