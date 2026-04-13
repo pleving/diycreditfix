@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 }
 
 const stats = [
-  { number: '45M+', label: 'Americans have errors on their credit reports' },
-  { number: '100pts', label: 'Average score increase from DIY dispute + habits' },
-  { number: '$0', label: 'Cost to dispute errors on your credit report' },
-  { number: '30–45', label: 'Days for a bureau to investigate your dispute' },
+  { number: '1 in 5', label: 'Americans has a material credit report error that\'s costing them points right now' },
+  { number: '79M+', label: 'Americans with a credit file — most have never read it' },
+  { number: '$0', label: 'Cost to dispute errors directly with the bureaus yourself' },
+  { number: '30–45', label: 'Days a bureau has to investigate your dispute by law' },
 ]
 
 const freeTopics = [

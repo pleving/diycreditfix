@@ -17,7 +17,7 @@ const disputeBundle = {
   includes: [
     { icon: '✉️', title: 'Letter 1 — Credit Bureau Dispute', desc: 'Send to Equifax, Experian, and TransUnion to challenge any inaccurate, unverifiable, or outdated item.' },
     { icon: '🏦', title: 'Letter 2 — Goodwill Deletion Letter', desc: 'Ask a creditor directly to remove a legitimate late payment as an act of goodwill — with compelling framing.' },
-    { icon: '📋', title: 'Letter 3 — Debt Validation Request', desc: 'Force collectors to prove the debt is valid and that they have the legal right to collect it (FDCPA § 809).' },
+    { icon: '📋', title: 'Letter 3 — Debt Validation Request', desc: 'Force collectors to prove the debt is real, that the amount is correct, and that they actually have the legal right to collect it — before you pay a dime.' },
     { icon: '🔍', title: 'Letter 4 — Method of Verification Request', desc: 'Challenge a bureau\'s investigation result when they mark an item "verified" without proper documentation.' },
   ],
   extras: [
@@ -153,6 +153,40 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      {/* CROA Brand Statement */}
+      <section className="py-12 px-4 bg-brand-50 border-b border-brand-100">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xs font-bold text-brand-600 uppercase tracking-widest mb-4 text-center">A Note Before You Buy</p>
+          <div className="bg-white rounded-2xl border border-brand-200 shadow-sm p-8">
+            <p className="text-gray-800 leading-relaxed mb-4">
+              We built this site on a single belief: the credit repair industry charges people for things
+              they can legally do themselves for free. That&apos;s not cynicism — it&apos;s federal law.
+            </p>
+            <p className="text-gray-800 leading-relaxed mb-4">
+              Before you spend a dollar here, you should know:{' '}
+              <strong>you have the legal right to dispute any inaccurate information on your credit
+              report directly with the bureaus, at no cost.</strong> Everything in these products,
+              you could do on your own without buying anything. What you&apos;re paying for is the
+              research, the formatting, and the time we&apos;ve already spent so you don&apos;t have to.
+            </p>
+            <p className="text-gray-800 leading-relaxed mb-6">
+              If you&apos;d rather do it from scratch, start with the free guides. We mean that.
+            </p>
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">— The DIYCreditFix Team</p>
+            <div className="border-t border-gray-100 mt-6 pt-5">
+              <p className="text-xs text-gray-400 leading-relaxed italic">
+                <strong className="not-italic text-gray-500">Consumer Credit File Rights Under State and Federal Law:</strong>{' '}
+                You have a right to dispute inaccurate information in your credit report by contacting
+                the credit bureau directly. There is no fee or charge for this. Anything a credit repair
+                company can do legally, you also have the right to do for yourself for free. You have
+                the right to sue a credit repair organization that violates the Credit Repair
+                Organizations Act. This right is not affected by any agreement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Products Grid */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
@@ -170,7 +204,7 @@ export default function ProductsPage() {
             {[
               { icon: '⚡', title: 'Instant Download', desc: 'Your files arrive the moment you purchase. No waiting, no shipping.' },
               { icon: '🛡️', title: '7-Day Guarantee', desc: 'Not happy? Email us within 7 days and we\'ll refund you, no questions asked.' },
-              { icon: '📄', title: 'Real Legal Framework', desc: 'Every letter references the actual statute — FCRA, FDCPA — not generic templates.' },
+              { icon: '📄', title: 'Grounded in Federal Law', desc: 'Every letter is built on rights Congress already gave you — the bureau and collector are legally required to respond.' },
             ].map(item => (
               <div key={item.title} className="flex flex-col items-center gap-2">
                 <span className="text-3xl">{item.icon}</span>
@@ -194,7 +228,7 @@ export default function ProductsPage() {
               },
               {
                 q: 'Are these templates legal to use?',
-                a: 'Yes. The dispute letters are based on rights granted to you by federal law — specifically the Fair Credit Reporting Act (15 U.S.C. § 1681i) and the Fair Debt Collection Practices Act (15 U.S.C. § 1692g). You have a legal right to dispute inaccurate information and request debt validation. These letters help you exercise those rights clearly and correctly.',
+                a: 'Yes. Federal law gives you the right to dispute inaccurate information on your credit report, and requires bureaus to investigate within 30 days. Federal law also gives you the right to demand that collectors prove a debt is valid before you pay. These letters are designed to exercise those rights in a way bureaus and collectors are legally required to respond to.',
               },
               {
                 q: 'What format are the downloads?',

@@ -63,7 +63,7 @@ export default function CreditScoresPage() {
             <h2>The Fastest Legal Ways to Improve Your Score</h2>
 
             <h3>Dispute Errors (Can Work in 30–45 Days)</h3>
-            <p>Approximately 20% of credit reports contain material errors. Incorrect account information, wrong balances, fraudulent accounts, and outdated negative items (collections older than 7 years, bankruptcies older than 10 years) should all be disputed. A successful dispute of a serious error can move your score 20–100 points.</p>
+            <p>According to the FTC, 1 in 5 consumers has a material error on their credit report — one significant enough to affect their score. Incorrect account information, wrong balances, fraudulent accounts, and outdated negative items (collections older than 7 years, bankruptcies older than 10 years) can all be disputed. How much a successful dispute moves your score depends on how serious the error is and what the rest of your file looks like — but removing a collection account or a high-balance error from an otherwise clean report can have a meaningful impact.</p>
 
             <h3>Reduce Utilization (Can Work in 30 Days)</h3>
             <p>Credit utilization is recalculated monthly based on your current balance vs. limit on each card. If you pay down a maxed-out card from $4,900 to $500 on a $5,000 limit (98% to 10%), your score can rise significantly within one billing cycle. Paying down balances is the fastest score-improvement lever you control directly.</p>
