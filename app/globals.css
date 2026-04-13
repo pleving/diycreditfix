@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply font-sans text-gray-800 bg-white; }
+  h1, h2, h3, h4, h5, h6 { @apply font-bold leading-tight; }
+  p { @apply leading-relaxed; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-brand-600 text-white font-semibold rounded-lg hover:bg-brand-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-brand-600 text-brand-600 font-semibold rounded-lg hover:bg-brand-50 transition-colors duration-200;
+  }
+  .article-body h2 {
+    @apply text-2xl font-bold text-gray-900 mt-10 mb-4;
+  }
+  .article-body h3 {
+    @apply text-xl font-bold text-gray-800 mt-8 mb-3;
+  }
+  .article-body p {
+    @apply text-gray-700 mb-5 leading-relaxed text-lg;
+  }
+  .article-body ul {
+    @apply list-disc pl-6 mb-5 space-y-2;
+  }
+  .article-body ul li {
+    @apply text-gray-700 text-lg;
+  }
+  .article-body ol {
+    @apply list-decimal pl-6 mb-5 space-y-2;
+  }
+  .article-body ol li {
+    @apply text-gray-700 text-lg;
+  }
+  .article-body blockquote {
+    @apply border-l-4 border-brand-500 pl-5 py-2 my-6 bg-brand-50 rounded-r-lg;
+  }
+  .article-body blockquote p {
+    @apply text-gray-800 font-medium mb-0;
+  }
+  .callout-box {
+    @apply bg-brand-50 border border-brand-200 rounded-xl p-6 my-8;
+  }
+  .callout-box h4 {
+    @apply text-brand-800 font-bold text-lg mb-2;
+  }
+  .callout-box p {
+    @apply text-brand-900 mb-0;
+  }
+  .stat-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-6 text-center;
+  }
+}
