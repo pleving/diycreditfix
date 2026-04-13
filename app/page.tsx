@@ -33,7 +33,7 @@ const steps = [
   { step: '01', title: 'Pull Your Reports', desc: 'Get all three free credit reports at AnnualCreditReport.com. Review every line.' },
   { step: '02', title: 'Identify Errors', desc: 'Look for incorrect accounts, wrong balances, fraudulent entries, and outdated information.' },
   { step: '03', title: 'File Disputes', desc: 'Send dispute letters to Equifax, Experian, and TransUnion. Use our free templates.' },
-  { step: '04', title: 'Change the Habits', desc: 'The score follows the behavior. Learn the root causes and change the upstream decisions.' },
+  { step: '04', title: 'Change the Habits', desc: 'The score follows the behavior. Learn the root causes and change the upstream decisions.', featured: true },
   { step: '05', title: 'Build & Monitor', desc: 'Open the right accounts, keep utilization low, and monitor monthly for changes.' },
 ]
 
@@ -77,17 +77,44 @@ export default function HomePage() {
       {/* How It Works */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">The DIY Credit Repair Process</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">Five steps. No expensive service required. You can do every single one of these yourself — for free.</p>
           </div>
+
+          {/* Behavior-first callout */}
+          <div className="mb-10 bg-brand-50 border-l-4 border-brand-500 rounded-xl p-5 flex gap-4 items-start max-w-3xl mx-auto">
+            <span className="text-2xl flex-shrink-0 mt-0.5">🧠</span>
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Before you start: the score follows the behavior.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Every step below works better when you understand what's actually driving your score down. Step 4 is the most important — and the one most people skip.{' '}
+                <Link href="/learn/root-behaviors" className="text-brand-600 font-semibold hover:underline">
+                  Read: The 10 Root Behaviors Behind Poor Credit →
+                </Link>
+              </p>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {steps.map((s, i) => (
               <div key={s.step} className="relative">
-                <div className="bg-brand-50 border border-brand-100 rounded-2xl p-6 h-full">
-                  <div className="text-4xl font-black text-brand-200 mb-3">{s.step}</div>
-                  <h3 className="font-bold text-gray-900 mb-2">{s.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{s.desc}</p>
+                <div className={`rounded-2xl p-6 h-full border ${
+                  (s as any).featured
+                    ? 'bg-brand-600 border-brand-500 text-white shadow-lg shadow-brand-200'
+                    : 'bg-brand-50 border-brand-100'
+                }`}>
+                  {(s as any).featured && (
+                    <span className="inline-block text-xs font-bold bg-white/20 text-white px-2 py-0.5 rounded-full mb-2">Most Important</span>
+                  )}
+                  <div className={`text-4xl font-black mb-3 ${(s as any).featured ? 'text-white/40' : 'text-brand-200'}`}>{s.step}</div>
+                  <h3 className={`font-bold mb-2 ${(s as any).featured ? 'text-white' : 'text-gray-900'}`}>{s.title}</h3>
+                  <p className={`text-sm leading-relaxed ${(s as any).featured ? 'text-brand-100' : 'text-gray-600'}`}>{s.desc}</p>
+                  {(s as any).featured && (
+                    <Link href="/learn/root-behaviors" className="inline-block mt-3 text-xs font-semibold text-brand-200 hover:text-white transition-colors">
+                      Learn the root causes →
+                    </Link>
+                  )}
                 </div>
                 {i < steps.length - 1 && (
                   <div className="hidden md:block absolute top-8 -right-3 text-brand-300 text-xl z-10">→</div>
