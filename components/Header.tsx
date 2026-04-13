@@ -92,6 +92,9 @@ export default function Header() {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
+            <Link href="/products" className="text-sm font-semibold text-brand-700 border border-brand-200 hover:bg-brand-50 px-4 py-2 rounded-lg transition-colors">
+              Shop Toolkits
+            </Link>
             <Link href="#email-capture" className="btn-primary text-sm px-4 py-2">
               Get Free Credit Guide
             </Link>
@@ -123,7 +126,11 @@ export default function Header() {
                 ))}
               </div>
             ))}
-            <div className="pt-3 px-3">
+            <div className="pt-3 px-3 space-y-2">
+              <Link href="/products" onClick={() => setMobileOpen(false)}
+                className="block text-center border border-brand-200 text-brand-700 font-semibold py-2 rounded-xl text-sm hover:bg-brand-50 transition-colors">
+                🛒 Shop Toolkits
+              </Link>
               <Link href="#email-capture" onClick={() => setMobileOpen(false)} className="btn-primary w-full text-sm">
                 Get Free Credit Guide
               </Link>
