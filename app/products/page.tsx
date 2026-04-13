@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import BuyButton from '@/components/BuyButton'
 
 export const metadata: Metadata = {
   title: 'Products — DIYCreditFix',
@@ -13,7 +14,7 @@ const disputeBundle = {
   anchor: 'One-time download. No subscription.',
   badge: 'MOST POPULAR',
   badgeColor: 'bg-brand-600',
-  href: '#buy-dispute-bundle',
+  productId: 'dispute-bundle',
   includes: [
     { icon: '✉️', title: 'Letter 1 — Credit Bureau Dispute', desc: 'Send to Equifax, Experian, and TransUnion to challenge any inaccurate, unverifiable, or outdated item.' },
     { icon: '🏦', title: 'Letter 2 — Goodwill Deletion Letter', desc: 'Ask a creditor directly to remove a legitimate late payment as an act of goodwill — with compelling framing.' },
@@ -37,7 +38,7 @@ const adhdKit = {
   anchor: 'One-time download. No subscription.',
   badge: 'FOR ADHD BRAINS',
   badgeColor: 'bg-purple-600',
-  href: '#buy-adhd-kit',
+  productId: 'adhd-kit',
   includes: [
     { icon: '🏦', title: 'Banking Setup Blueprint', desc: 'The 4-account structure that separates income, bills, spending, and savings — so a bad week can\'t accidentally wipe out rent.' },
     { icon: '⚡', title: 'Automation Checklist', desc: '8 critical automations ranked by priority — each with what to set up, when, and why. Includes a printable checklist.' },
@@ -55,7 +56,7 @@ const adhdKit = {
   guarantee: '7-day money-back guarantee. If you\'re not satisfied, email us and we\'ll refund you — no questions asked.',
 }
 
-function ProductCard({ product, featured }: { product: typeof disputeBundle; featured?: boolean }) {
+function ProductCard({ product, featured }: { product: typeof disputeBundle & { productId: string }; featured?: boolean }) {
   return (
     <div className={`relative rounded-2xl border-2 flex flex-col ${
       featured
@@ -83,16 +84,9 @@ function ProductCard({ product, featured }: { product: typeof disputeBundle; fea
         </div>
 
         {/* CTA */}
-        <a
-          href={product.href}
-          className={`block w-full text-center py-4 px-6 rounded-xl font-bold text-lg transition-all mb-8 ${
-            featured
-              ? 'bg-brand-600 hover:bg-brand-700 text-white shadow-lg shadow-brand-200'
-              : 'bg-gray-900 hover:bg-gray-800 text-white'
-          }`}
-        >
-          Get Instant Access →
-        </a>
+        <div className="mb-8">
+          <BuyButton productId={product.productId} featured={featured} />
+        </div>
 
         {/* What's inside */}
         <div className="mb-6">
